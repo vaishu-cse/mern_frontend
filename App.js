@@ -6,13 +6,13 @@ function App() {
   const [users, setUsers] = useState([]);
 
   const addUser = async () => {
-    await axios.post("http://localhost:5000/add", { name });
+    await axios.post("https://mern-deployment-cgsk.onrender.com/add", { name });
     fetchUsers();
     setName("");
   };
 
   const fetchUsers = async () => {
-    const res = await axios.get("http://localhost:5000/users");
+    const res = await axios.get("https://mern-deployment-cgsk.onrender.com/users");
     setUsers(res.data);
   };
 
